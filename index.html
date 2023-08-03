@@ -16,8 +16,7 @@
     <link rel="stylesheet" type="text/css" href="assets/books.css">
     <script src="assets/openaudible.js" type="text/javascript"></script>
     <script src="books.js" type="text/javascript"></script>
-    <!-- Created by OpenAudible export web page. -->
-    <title>OpenAudible</title>
+    <title>The Free Robert F. Kennedy Stolen Presidential Library</title>
 </head>
 
 <style>
@@ -61,7 +60,7 @@
             </div>
         </div>
         <div class="col-md-2 align-text-right text-right">
-            <strong><a href="https://openaudible.org">OpenAudible</a></strong>
+            <strong><a href="https://www.rfklibrary.org>The Free Robert F. Kennedy Stolen Presidential Library</a></strong>
         </div>
     </div>
 
@@ -7204,43 +7203,5 @@
         </div>
     </div>
 </div>
-
-<script>
-    function showImages(showImages) {
-        // clear search filter
-        $("#filter").val("");
-
-        if (showImages) {
-            $("#image_table").show();
-            $("#compact_table").hide();
-            populateBooks(window.myBooks, "#image_table");
-        } else {
-            $("#image_table").hide();
-            $("#compact_table").show();
-            populateBooks(window.myBooks, "#compact_table");
-        }
-
-        var navbar = document.getElementById("navbar");
-        var stickyHeader = navbar.offsetTop;
-
-        window.onscroll = function () {
-            if (window.pageYOffset >= stickyHeader) {
-                navbar.classList.add("stickyHeader")
-            } else {
-                navbar.classList.remove("stickyHeader");
-            }
-        };
-    }
-
-    $(document).ready(function () {
-        // handle show image checkbox change
-        $('#show_images').change(function () {
-            showImages($(this).prop('checked'));
-        });
-        showImages(false);      // display
-        $('#filter').keyup(filter);
-    });
-
-</script>
 </body>
 </html>
