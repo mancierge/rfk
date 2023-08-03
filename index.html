@@ -7213,9 +7213,9 @@
             $("#compact_table").hide();
             populateBooks(window.myBooks, "#image_table");
         } else {
-            $("#image_table").hide();
-            $("#compact_table").show();
-            populateBooks(window.myBooks, "#compact_table");
+            $("#image_table").show();
+            $("#compact_table").hide();
+            populateBooks(window.myBooks, "#image_table");
         }
 
         var navbar = document.getElementById("navbar");
@@ -7235,7 +7235,7 @@
         $('#show_images').change(function () {
             showImages($(this).prop('checked'));
         });
-        showImages(false);      // display
+        showImages(true);      // display
         $('#filter').keyup(filter);
     });
 
