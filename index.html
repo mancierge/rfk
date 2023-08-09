@@ -55,7 +55,6 @@
         </div>
         <div class="col-md-2">
             <div class="form-group">
-                <label><input type="checkbox" name="checkbox" id="show_images">Show Images</label>
             </div>
         </div>
         <div class="col-md-2 align-text-right text-right">
@@ -73,7 +72,6 @@
                     <th data-field="author" data-sortable="true">Author</th>
                     <th data-field="narrated_by" data-sortable="true">Narrator</th>
                     <th data-field="duration" data-sortable="true">Duration</th>
-                    <th data-field="release_date" data-sortable="true">Released</th>
                     <th data-field="description" data-sortable="true">Description</th>
                 </tr>
                 </thead>
@@ -91,7 +89,9 @@
                 <tr>
                     <th data-field="image" data-sortable="true">Title</th>
                     <th data-field="info" data-sortable="true">Info</th>
-                    <th data-field="release_date" data-sortable="true">Released</th>
+                    <th data-field="duration" data-sortable="true">Duration</th>
+                    <th data-field="author" data-sortable="true">Author</th>
+                    <th data-field="narrated_by" data-sortable="true">Narrator</th>
                     <th data-field="summary" data-sortable="false">Summary</th>
                 </tr>
                 </thead>
@@ -130,18 +130,6 @@
                                     <th class="detail_key">Duration:</th>
                                     <td class="detail_value" id="duration">Value</td>
                                 </tr>
-                                <tr>
-                                    <th class="detail_key">Purchased</th>
-                                    <td class="detail_value" id="purchase_date">Value</td>
-                                </tr>
-                                <tr>
-                                    <th class="detail_key">Series:</th>
-                                    <td class="detail_value" id="series"></td>
-                                </tr>
-                                <tr>
-                                    <th class="detail_key">Rating:</th>
-                                    <td class="detail_value" id="rating">Value</td>
-                                </tr>
                                 <tr id="mp3_details">
                                     <th class="detail_key">Files:</th>
                                     <td class="detail_value" id="files"></td>
@@ -168,12 +156,12 @@
 
         if (showImages) {
             $("#image_table").show();
-            $("#compact_table").hide();
+            $("#compact_table").show();
             populateBooks(window.myBooks, "#image_table");
         } else {
-            $("#image_table").hide();
+            $("#image_table").show();
             $("#compact_table").show();
-            populateBooks(window.myBooks, "#compact_table");
+            populateBooks(window.myBooks, "#image_table");
         }
 
         var navbar = document.getElementById("navbar");
@@ -193,7 +181,7 @@
         $('#show_images').change(function () {
             showImages($(this).prop('checked'));
         });
-        showImages(false);      // display
+        showImages(true);      // display
         $('#filter').keyup(filter);
     });
 
