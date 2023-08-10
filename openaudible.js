@@ -189,7 +189,7 @@ function fileLinks(book) {
 
     $.each(book.files, function (index, kind) {
         var file = kind + "/" + fixedEncodeURIComponent(book.filename) + "." + kind;
-        var img = "<img src=\"assets/" + kind + ".png\" width=\"21\" height=\"11\">";
+        var img = "<img src=\"assets/" + kind + ".png\" width=\"119\" height=\"32\">";
         var link = "<a href=\"" + file + "\" download>" + img + "</a>";
         files += link;
     });
