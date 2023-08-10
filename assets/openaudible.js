@@ -28,7 +28,7 @@ function fileLink(link, kind) {
     if (!link) {
         return "";
     }
-    return "<a href=\"" + kind + "/" + fixedEncodeURIComponent(link) + "\" download>" + kind + "</a> ";
+    return "<a href=" + "https://" + fixedEncodeURIComponent(book.filename) + "." + kind "\" download>" + "</a> ";
 }
 
 
