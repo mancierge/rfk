@@ -28,7 +28,7 @@ function fileLink(link, kind) {
     if (!link) {
         return "";
     }
-    return "<a href=\"" + kind + "/" + fixedEncodeURIComponent(link) + "\" download>" + kind + "</a> ";
+    return "<a href=\"" + kind + "https://" + fixedEncodeURIComponent(link) + "\" download>" + kind + "</a> ";
 }
 
 
@@ -124,12 +124,6 @@ function populateBooks(arr, table) {
         var series = seriesLink(book);
         if (series) {
             info += "Series: " + series + "<br>";
-        }
-        info += duration;
-        row['info'] = info;
-
-        data.push(row);
-    }
 
     // create bootstrapTable and populate table with data.
     if (table && arr.length) {
