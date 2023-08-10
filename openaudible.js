@@ -182,9 +182,9 @@ function fileLinks(book) {
     var files = "";
 
     $.each(book.files, function (index, kind) {
-        var file = kind + "/" + fixedEncodeURIComponent(book.filename) + "." + kind;
+        var file = "https://" + fixedEncodeURIComponent(book.filename) + "." + kind;
         var img = "<img src=\"assets/" + kind + ".png\" width=\"119\" height=\"32\">";
-        var link = "<a href=\"" + file + "\" download>" + img + "</a>";
+        var link = "<a href="" + file + "\" download>" + img + "</a>";
         files += link;
     });
 
