@@ -28,7 +28,7 @@ function fileLink(link, kind) {
     if (!link) {
         return "";
     }
-    return "<a href=\"" + kind + "https://" + fixedEncodeURIComponent(link) + "\" download>" + kind + "</a> ";
+    return "<a href=\"" + "https://" + fixedEncodeURIComponent(link) + "\" download>" + kind + "</a> ";
 }
 
 
@@ -184,7 +184,7 @@ function fileLinks(book) {
     $.each(book.files, function (index, kind) {
         var file = "https://" + fixedEncodeURIComponent(book.filename) + "." + kind;
         var img = "<img src=\"assets/" + kind + ".png\" width=\"119\" height=\"32\">";
-        var link = "<a href="" + file + "\" download>" + img + "</a>";
+        var link = "<a href="" + filename + "\" download>" + img + "</a>";
         files += link;
     });
 
